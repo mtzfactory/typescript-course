@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "module": "NodeNext",
+    "baseUrl": ".",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true
+  },
+  "include": [
+    "./src/*"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "NodeNext"
+    }
+  }
+}
