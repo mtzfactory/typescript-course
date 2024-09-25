@@ -21,6 +21,8 @@ interface Apple {
   variety: string;
 }
 
+type AppleBox = Box<Apple>;
+
 // Type Composition
 type OrNull<Type> = Type | null;
 type OneOrMany<Type> = Type | Type[];
@@ -30,12 +32,10 @@ const canBeNull: OneOrManyOrNullStrings = null;
 const canBeString: OneOrManyOrNullStrings = 'Trainline';
 const canBeArray: OneOrManyOrNullStrings = ['hola'];
 
-type AppleBox = Box<Apple>;
-
 /**
  * Generics in functions
  */
-function identity<Type>(arg: Type): Type {
+function identity<GenericType>(arg: GenericType): GenericType {
   return arg;
 }
 
@@ -44,7 +44,7 @@ const output = identity<string>('myString');
 /**
  * Generic Constraints
  */
-function _loggingIdentity<Type>(arg: Type): Type {
+function _loggingIdentity<MyType>(arg: MyType): MyType {
   console.log(arg.length);
   return arg;
 }
@@ -53,7 +53,7 @@ interface Lengthwise {
   length: number;
 }
 
-function loggingIdentity<Type extends Lengthwise>(arg: Type): Type {
+function loggingIdentity<MyType extends Lengthwise>(arg: MyType): MyType {
   console.log(arg.length); // Now we know it has a .length property, so no more error
   return arg;
 }

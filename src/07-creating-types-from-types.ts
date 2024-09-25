@@ -36,17 +36,17 @@ const pointB: typeof pointA = { x: 10, y: 20 };
 type Citizen = { age: number; name: string; alive: boolean };
 type Alived = Citizen['alive'];
 
-const MyArray = [
+const myArray = [
   { name: 'Alice', age: 15 },
   { name: 'Bob', age: 23 },
   { name: 'Eve', age: 38 },
 ];
 
-type Age = (typeof MyArray)[number]['age'];
+type Age = (typeof myArray)[number]['age'];
 
 // Or
 
-type Person = (typeof MyArray)[number];
+type Person = (typeof myArray)[number];
 type Age2 = Person['age'];
 
 /**
@@ -72,6 +72,9 @@ interface NameLabel {
 type NameOrId<T extends number | string> = T extends number
   ? IdLabel
   : NameLabel;
+
+const name: NameOrId<string> = { name: 'Trainline' };
+const id: NameOrId<number> = { id: 1 };
 
 /**
  * Mapped Types
