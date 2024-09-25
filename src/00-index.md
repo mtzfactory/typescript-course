@@ -1,5 +1,9 @@
 # Typescript Basics
 
+[Typescript documentation](https://www.typescriptlang.org/docs/)
+
+## Index
+
 1. [Do](./01-do.ts)
 2. [Don't](./02-dont.ts)
 3. [Do less](./03-do-less.ts)
@@ -10,3 +14,4 @@
 8. [Utility types](./08-utility-types.ts)
 9. [Typescript in React](./09-typescript-in-react.tsx)
 10. [Typescript and Eslint](./10-typescript-and-eslint.ts)
+11. [tsconfig](./11-tsconfig.ts)
