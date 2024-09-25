@@ -20,3 +20,4 @@ type T = { a: 1; b: 2; c: 3 };
 // -- End of preparation
 
 const a = expr as any as T;
+const b = expr as unknown as T;
