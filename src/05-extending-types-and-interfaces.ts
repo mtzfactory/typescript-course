@@ -4,7 +4,9 @@
  * Extending Types And Interfaces
  */
 
-// Interface extends
+/**
+ * Interface extends
+ */
 interface Colorful {
   color: string;
 }
@@ -15,7 +17,9 @@ interface Circle {
 
 interface ColorfulCircle extends Colorful, Circle {}
 
-// Intersection types
+/**
+ * Intersection types
+ */
 type WithColor = {
   color: string;
 };

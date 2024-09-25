@@ -14,7 +14,9 @@ function addId(id: ID) {
   return id.toUpperCase();
 }
 
-// Use the typeof type guards.
+/**
+ * Use the typeof type guards.
+ */
 function padLeft(padding: number | string, input: string) {
   if (typeof padding === 'number') {
     return ' '.repeat(padding) + input;
@@ -22,7 +24,9 @@ function padLeft(padding: number | string, input: string) {
   return padding + input;
 }
 
-// Use the in operator narrowing.
+/**
+ * Use the in operator narrowing.
+ */
 type Horse = { gallop: () => void };
 type Grasshopper = { hop: () => void };
 
@@ -33,7 +37,9 @@ function move(animal: Horse | Grasshopper) {
   return animal.hop();
 }
 
-// Use the instanceof narrowing.
+/**
+ * Use the instanceof narrowing.
+ */
 function logValue(x: Date | string) {
   if (x instanceof Date) {
     console.log(x.toUTCString());
@@ -42,8 +48,10 @@ function logValue(x: Date | string) {
   }
 }
 
-// Use type predicates: user-defined type guard function whose return type is a
-// type predicate
+/**
+ * Use type predicates: user-defined type guard function whose return type is a
+ * type predicate
+ */
 
 // -- Preparation
 type Fish = { swim: () => void };
@@ -64,7 +72,9 @@ if (isFish(pet)) {
   pet.fly();
 }
 
-// Use discriminated unions.
+/**
+ * Use discriminated unions.
+ */
 interface Square {
   kind: 'square';
   sideLength: number;
