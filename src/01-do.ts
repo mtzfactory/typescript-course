@@ -72,6 +72,9 @@ type Point = {
   y: number;
 };
 type Tuple = [string, boolean];
+type GenericStringObject = {
+  [index: string]: string;
+};
 
 // Type aliases and interfaces are very similar, and in many cases you
 // can choose between them freely. The key distinction is that a type
