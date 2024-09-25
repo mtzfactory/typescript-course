@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -29,3 +30,11 @@ doSomething([1, 2, 3]);
 
 // The TypeScript object type represents all values that are not in primitive types (string,
 // number, bigint, boolean, symbol, null, or undefined).
+
+/**
+ * Don't use Function type
+ */
+type MyFunctionA = Function;
+
+// Better if we do:
+type MyFunctionB = () => void;
