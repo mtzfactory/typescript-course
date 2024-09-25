@@ -15,3 +15,4 @@
 06. [Creating types from types I](./06-creating-types-from-types.ts)
 07. [Creating types from types II](./07-creating-types-from-types.ts)
 08. [Utility types](./08-utility-types.ts)
+09. [Typescript in React](./09-typescript-in-react.tsx)
